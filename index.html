@@ -219,6 +219,18 @@
     color: var(--slate);
   }
   .info-list li:last-child { border-bottom: none; }
+  .info-list li.hours-row { display: block; }
+  .hours-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 16px;
+    row-gap: 3px;
+    margin-top: 8px;
+    font-size: 0.86rem;
+  }
+  .hours-grid .day { color: var(--ink); font-weight: 600; }
+  .hours-grid .time { color: var(--slate); text-align: right; }
+  .hours-grid .time.closed { color: var(--pink); font-style: italic; }
   .info-list li strong { color: var(--ink); min-width: 90px; }
   .todo {
     font-style: italic;
@@ -590,24 +602,39 @@
     <div class="info-card">
       <h3>Location &amp; Hours</h3>
       <ul class="info-list">
-        <li><strong>Address</strong> 8842 Boulevard Langelier, St-Léonard, QC, H1P 3C8</li>
+        <li><strong>Address</strong> Montreal, QC</li>
         <li><strong>Phone</strong> <span class="todo">Add phone number</span></li>
-        <li><strong>Hours</strong> <span class="todo">Add opening hours</span></li>
+        <li class="hours-row">
+          <strong>Hours</strong>
+          <div class="hours-grid">
+            <span class="day">Monday</span><span class="time">9:00 a.m. – 5:30 p.m.</span>
+            <span class="day">Tuesday</span><span class="time">9:00 a.m. – 5:30 p.m.</span>
+            <span class="day">Wednesday</span><span class="time">9:00 a.m. – 5:30 p.m.</span>
+            <span class="day">Thursday</span><span class="time">9:00 a.m. – 5:30 p.m.</span>
+            <span class="day">Friday</span><span class="time">9:00 a.m. – 5:30 p.m.</span>
+            <span class="day">Saturday</span><span class="time">9:00 a.m. – 5:30 p.m.</span>
+            <span class="day">Sunday</span><span class="time closed">Closed</span>
+          </div>
+        </li>
         <li><strong>Category</strong> Non-profit animal rescue &amp; adoption service</li>
       </ul>
     </div>
     <div class="info-card">
       <h3>Online</h3>
       <ul class="info-list">
+        <li><strong>Website</strong> <a href="https://savethepaws.github.io" target="_blank" rel="noopener">savethepaws.github.io</a></li>
         <li><strong>Instagram</strong> @savethepaws</li>
+        <li><strong>Facebook</strong> <a href="https://www.facebook.com/share/1BzeMHJ9JT/?mibextid=wwXIfr" target="_blank" rel="noopener">View page</a></li>
+        <li><strong>LinkedIn</strong> <a href="https://www.linkedin.com/company/save-the-paws-project" target="_blank" rel="noopener">Save the Paws</a></li>
+        <li><strong>YouTube</strong> <a href="https://www.youtube.com/@savethe.pawsss" target="_blank" rel="noopener">@savethe.pawsss</a></li>
+        <li><strong>TikTok</strong> <a href="https://www.tiktok.com/@savethe.pawss" target="_blank" rel="noopener">@savethe.pawss</a></li>
         <li><strong>Google Profile</strong> <a href="https://share.google/mbhORVa4PYz85Hdbh" target="_blank" rel="noopener">View listing</a></li>
         <li><strong>Rating</strong> <span class="todo">Add rating &amp; review count</span></li>
-        <li><strong>Website</strong> <span class="todo">Add primary website / linktree</span></li>
       </ul>
     </div>
   </div>
   <p class="placeholder-note" style="margin-top:24px; font-size:0.85rem; color:var(--slate); border:1px dashed rgba(44,42,43,0.2); border-radius:10px; padding:14px 18px;">
-    Note: the Google Business Profile link couldn't be auto-read (Google's share links block automated fetching). Send over the address, phone, hours, and rating shown on the listing and I'll drop them straight into this section.
+    Note: the Google Business Profile link couldn't be auto-read (Google's share links block automated fetching). Send over the phone number and rating shown on the listing and I'll drop them straight into this section.
   </p>
 </section>
 
@@ -702,50 +729,64 @@
   <div class="persona-grid">
     <div class="persona-card">
       <div class="persona-top">
-        <div class="persona-avatar" style="background:var(--pink);">R</div>
+        <div class="persona-avatar" style="background:var(--pink);">É</div>
         <div>
-          <h3>Rescue-Ready Rania</h3>
-          <span>The Adopter</span>
+          <h3>Émilie Bouchard</h3>
+          <span>Prospective Cat or Dog Adopter</span>
         </div>
       </div>
       <div class="persona-body">
         <div class="persona-snapshot">
-          <div><b>Age</b>31</div>
-          <div><b>Location</b>St-Léonard / Greater Montreal, QC</div>
+          <div><b>Age</b>29</div>
+          <div><b>Location</b>St-Léonard, Montreal, QC</div>
           <div><b>Occupation</b>Marketing Coordinator (hybrid)</div>
-          <div><b>Income</b>$62,000 CAD</div>
-          <div style="grid-column:1/-1;"><b>Household</b>Single, recently moved into a pet-friendly condo</div>
+          <div><b>Income</b>~$58,000 CAD</div>
+          <div><b>Education</b>Bachelor's degree</div>
+          <div><b>Household</b>Lives alone, pet-friendly rental apartment</div>
         </div>
         <div class="p-row">
           <div class="p-label">Who she is</div>
-          <p>Has wanted a pet since moving into her own place two years ago. Now that her schedule is stable and her building allows pets, she's actively looking to adopt — not buy — because she believes rescue animals deserve a second chance. She scrolls Instagram and Facebook in the evenings, following local rescue accounts and getting attached to specific animals' stories before ever filling out an application.</p>
+          <p>Has wanted a pet since moving into her own apartment two years ago. Now that her schedule and finances are stable, she's actively looking to adopt rather than buy, because she believes rescue animals deserve a real chance at a home. She researches carefully and gets attached to specific animals' stories before ever filling out an application. She's compassionate but cautious — she values animal welfare, honesty and transparency, ethical adoption over buying from breeders, supporting local causes, and long-term commitment, and won't commit until she's confident the animal is a good match.</p>
         </div>
         <div class="p-row">
           <div class="p-label">Goals</div>
           <ul class="p-list">
-            <li>Find a cat or dog whose temperament genuinely fits her lifestyle and living space.</li>
-            <li>Feel confident the animal is healthy and has been properly cared for before adoption.</li>
-            <li>Support a local, ethical cause instead of a breeder or pet store.</li>
+            <li>Find a healthy cat or dog whose temperament fits her lifestyle and apartment.</li>
+            <li>Give a rescued animal a safe, permanent home.</li>
+            <li>Understand the animal's health, personality, and care needs before committing.</li>
+            <li>Adopt from a trustworthy Quebec rescue organization and feel supported throughout.</li>
           </ul>
         </div>
         <div class="p-row">
-          <div class="p-label">Pain points</div>
+          <div class="p-label">Fears &amp; pain points</div>
           <ul class="p-list">
-            <li>Anxious about adopting an animal with an unknown or difficult past.</li>
-            <li>Frustrated by shelters with slow replies, unclear fees, or confusing applications.</li>
-            <li>Worried about hidden costs after the adoption fee.</li>
+            <li>Adopting an animal whose energy or personality doesn't fit her apartment or lifestyle.</li>
+            <li>Discovering an unexpected health or behavioural issue, or underestimating ongoing vet/food/care costs.</li>
+            <li>Not receiving enough information about the animal's history, or facing a slow, unclear application process.</li>
           </ul>
         </div>
         <div class="p-row">
-          <div class="p-label">Messaging strategy</div>
-          <p>Lead with transparency (vet care, grooming, temperament notes), real rescue-to-home stories, and a simple, low-friction path to apply.</p>
+          <div class="p-label">What Save the Paws can realistically offer</div>
+          <ul class="p-list">
+            <li>Detailed online pet profiles with available veterinary records and honest behavioural notes from volunteers/fosters.</li>
+            <li>A lifestyle-based application, a scheduled meet-and-greet, and transparent adoption-fee information.</li>
+            <li>An adoption-prep checklist and a post-adoption follow-up, with referrals to vets or trainers when appropriate.</li>
+          </ul>
+        </div>
+        <div class="p-row">
+          <div class="p-label">Customer journey</div>
+          <p>Awareness (sees a rescue story or adoptable-animal post on social) → Interest (browses available animals) → Consideration (reads health &amp; personality info) → Trust (testimonials, comments, questions) → Action (applies, attends meet-and-greet) → Post-adoption (transition guidance &amp; follow-up check-in).</p>
         </div>
         <div class="p-row">
           <div class="p-label">Preferred channels</div>
-          <div class="persona-channels"><span>Instagram Reels &amp; Stories</span><span>Facebook groups</span><span>TikTok</span></div>
+          <div class="persona-channels"><span>Facebook</span><span>Instagram Reels</span><span>TikTok</span><span>Google</span><span>Email</span></div>
+        </div>
+        <div class="p-row">
+          <div class="p-label">Suggested hashtags</div>
+          <p>#AnimalRescue #PetAdoption #AdoptDontShop #QuebecPets #SaveThePaws</p>
         </div>
       </div>
-      <p class="persona-quote">"I don't want to buy a pet from a breeder when there are animals right here that just need a real chance."</p>
+      <p class="persona-quote">"I want to give a rescued animal a loving home, but I need honest information to know that we're the right match."</p>
     </div>
 
     <div class="persona-card">
@@ -822,25 +863,31 @@
       <div class="p-icon" style="background:var(--pink); color:#fff;">📷</div>
       <h3>Instagram</h3>
       <div class="p-role">Primary — Adoption &amp; Storytelling</div>
-      <p>Highly visual, ideal for before/after rescue photos, adoptable pet profiles, and Stories/Highlights. Reaches Compassionate Chloé and drives foster &amp; adoption interest. Already mocked up above with consistent branding.</p>
+      <p>Highly visual, ideal for before/after rescue photos, adoptable pet profiles, and Stories/Highlights. Reaches both Émilie and Sarah during research and drives foster &amp; adoption interest. Already mocked up above with consistent branding.</p>
     </div>
     <div class="platform-card">
       <div class="p-icon" style="background:#5A5B5F; color:#fff;">📘</div>
       <h3>Facebook</h3>
       <div class="p-role">Primary — Community &amp; Trust</div>
-      <p>Best for reaching Family-First Marc and Volunteer Valérie through local Quebec community groups, longer-form success stories, events, and fundraisers, plus reviews that build trust before an adoption visit.</p>
+      <p>Best for reaching Sarah and Émilie through local Quebec community groups, longer-form success stories, events, and fundraisers, plus reviews that build trust before an adoption visit.</p>
     </div>
     <div class="platform-card">
       <div class="p-icon" style="background:var(--blue); color:var(--ink);">🎵</div>
       <h3>TikTok</h3>
       <div class="p-role">Growth — Reach &amp; Awareness</div>
-      <p>Short rescue-day and transformation videos have strong organic reach for animal-rescue content, extending awareness beyond existing followers and attracting a younger volunteer/donor base.</p>
+      <p>Short rescue-day and transformation videos have strong organic reach for animal-rescue content, extending awareness beyond existing followers and attracting a younger volunteer/donor base. @savethe.pawss</p>
+    </div>
+    <div class="platform-card">
+      <div class="p-icon" style="background:#c4302b; color:#fff;">▶️</div>
+      <h3>YouTube</h3>
+      <div class="p-role">Supporting — Long-Form Trust Building</div>
+      <p>Longer adoption journeys, educational care videos, and full foster/rescue stories for adopters like Sarah who want deeper research before applying. @savethe.pawsss</p>
     </div>
     <div class="platform-card">
       <div class="p-icon" style="background:var(--mist); color:var(--ink);">📍</div>
       <h3>Google Business Profile</h3>
       <div class="p-role">Supporting — Local Discovery</div>
-      <p>Captures high-intent local search ("animal rescue near me," "cat adoption Quebec"), surfaces hours, address, and reviews, and complements the three core social platforms above.</p>
+      <p>Captures high-intent local search ("animal rescue near me," "cat adoption Quebec"), surfaces hours, address, and reviews, and complements the core social platforms above.</p>
     </div>
   </div>
 </section>
@@ -860,6 +907,7 @@
         <tr><td class="platform-cell">Instagram</td><td>4×/week</td><td>Adoptable pet spotlights, foster/volunteer intros, behind-the-scenes reels, care &amp; grooming tips</td></tr>
         <tr><td class="platform-cell">Facebook</td><td>3×/week</td><td>Adoption success stories, "meet the rescue" posts, sharable event announcements</td></tr>
         <tr><td class="platform-cell">TikTok</td><td>2×/week</td><td>Rescue-day clips, quick "day in the life of a foster" videos</td></tr>
+        <tr><td class="platform-cell">YouTube</td><td>1×/month</td><td>Longer intro video: who we are, how adoption works</td></tr>
       </table>
     </div>
   </div>
@@ -873,6 +921,7 @@
         <tr><td class="platform-cell">Instagram</td><td>4×/week</td><td>Foster-needed callouts, polls/Q&amp;A in Stories, donation-drive graphics, adopter testimonials</td></tr>
         <tr><td class="platform-cell">Facebook</td><td>3×/week</td><td>Fundraiser event page &amp; updates, volunteer shoutouts, community group cross-posting</td></tr>
         <tr><td class="platform-cell">TikTok</td><td>3×/week</td><td>Transformation (rescue → recovery) videos, trending-audio adoption promos</td></tr>
+        <tr><td class="platform-cell">YouTube</td><td>1×/month</td><td>Foster/volunteer story, full rescue-to-adoption journey</td></tr>
       </table>
     </div>
   </div>
@@ -886,6 +935,7 @@
         <tr><td class="platform-cell">Instagram</td><td>5×/week</td><td>Seasonal adoption drive, milestone recap (animals rescued/adopted), live Q&amp;A, thank-you posts</td></tr>
         <tr><td class="platform-cell">Facebook</td><td>4×/week</td><td>End-of-quarter impact report, adopter reunions, holiday/seasonal donation matching</td></tr>
         <tr><td class="platform-cell">TikTok</td><td>3×/week</td><td>"Where are they now" adopter check-ins, top-moments recap reel</td></tr>
+        <tr><td class="platform-cell">YouTube</td><td>1×/month</td><td>Quarter recap video, educational responsible pet-ownership guide</td></tr>
       </table>
     </div>
   </div>
